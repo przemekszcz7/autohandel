@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --black: #0D0D0D;
+  --dark: #141414;
+  --card: #1C1C1C;
+  --white: #F2F2F0;
+  --gray: #888888;
+  --gray-light: #BBBBBB;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-mid: rgba(255, 255, 255, 0.14);
+  --red: #CC1F1F;
+  --red-dark: #A01818;
+  --red-glow: rgba(204, 31, 31, 0.12);
+  --red-ticker: #B81C1C;
+}
+
+@theme {
+  --color-brand-black: var(--black);
+  --color-brand-dark: var(--dark);
+  --color-brand-card: var(--card);
+  --color-brand-white: var(--white);
+  --color-brand-gray: var(--gray);
+  --color-brand-gray-light: var(--gray-light);
+  --color-brand-border: var(--border);
+  --color-brand-border-mid: var(--border-mid);
+  --color-brand-red: var(--red);
+  --color-brand-red-dark: var(--red-dark);
+  --color-brand-red-glow: var(--red-glow);
+  --color-brand-red-ticker: var(--red-ticker);
+
+  --font-oswald: "Oswald", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+
+@keyframes slide-line {
+  0%, 100% { width: 56px; }
+  50%       { width: 92px; }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 1.8s ease infinite;
+}
+
+.animate-slide-line {
+  animation: slide-line 2.2s ease infinite;
+}
+
+/* Animations for reveal on scroll (or entry fade effects) */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Autohandel Skup Sprzedaż Zamiana",
+  "description": "Skup i sprzedaż aut używanych, motocykli i maszyn rolniczych. Gotówka do ręki, własna laweta, minimum formalności. Zachodniopomorskie i Pomorskie. Tel: 791 338 452",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
